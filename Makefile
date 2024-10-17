@@ -10,11 +10,11 @@ create_env:
 
 erp:
 	python code/erp.py
-	jupyter nbconvert --to notebook --execute notebooks/erp.ipynb
+	jupyter nbconvert --to notebook --inplace --execute notebooks/erp.ipynb
 
 audioxcorr:
 	python code/audioxcorr.py
-	jupyter nbconvert --to notebook --execute notebooks/audioxcorr.ipynb
+	jupyter nbconvert --to notebook --inplace --execute notebooks/audioxcorr.ipynb
 
 encoding:
 	sbatch --job-name=enc --time=01:10:00 --gres=gpu:1 --partition=mig code/slurm.sh -- code/encoding.py --modelname=gpt2-xl --layer=24

@@ -1,0 +1,14 @@
+*
+
+!.gitignore
+!README.md
+!Makefile
+
+!code/
+!code/*py
+
+!figures/
+!notebooks/
+!notebooks/*py
+!notebooks/*ipynb
+!notebooks/*mplstyle

@@ -1,0 +1,23 @@
+# -- custom matplotlib stylesheet
+# https://matplotlib.org/stable/tutorials/introductory/customizing.html
+
+font.size: 8
+font.family : sans-serif
+figure.dpi : 150
+figure.titlesize : 9
+axes.titlesize : 9
+axes.labelsize : 9
+axes.spines.bottom : True
+axes.spines.left : True
+axes.spines.right : False
+axes.spines.top : False
+axes.facecolor: (1, 1, 1, 0)
+figure.facecolor: (1, 1, 1, 0)
+ytick.labelsize : 8
+xtick.labelsize : 8
+legend.frameon: False
+
+savefig.dpi : 300
+savefig.bbox : tight
+savefig.transparent : True
+svg.fonttype : none
