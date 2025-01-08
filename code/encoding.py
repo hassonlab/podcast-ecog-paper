@@ -16,7 +16,7 @@ from sklearn.preprocessing import StandardScaler
 
 def get_features(modelname: str, layer: int = 0):
 
-    with h5py.File(f"../monkey/stimuli/{modelname}/states.hdf5", "r") as f:
+    with h5py.File(f"../monkey/stimuli/{modelname}/features.hdf5", "r") as f:
         datasets = list(f.keys())
         if len(datasets) == 1:
             key = datasets[0]
@@ -129,6 +129,8 @@ def main(
             model.fit(X_train, Y_train)
             Y_preds = model.predict(X_test)
             corr = correlation_score(Y_test, Y_preds).reshape(epochs_shape)
+            # coefs = model['ridgecv'].coef_.reshape((-1, *epochs_shape))
+            # save best alphas too?
 
             if use_gpu:
                 corr = corr.numpy(force=True)  # for torch

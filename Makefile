@@ -22,3 +22,5 @@ encoding:
 	sbatch --job-name=enc --time=01:10:00 --gres=gpu:1 --partition=mig code/slurm.sh -- code/encoding.py --modelname=syntactic
 	sbatch --job-name=enc --time=01:10:00 --gres=gpu:1 --partition=mig code/slurm.sh -- code/encoding.py --modelname=phonetic
 	sbatch --job-name=enc --time=01:10:00 --gres=gpu:1 --partition=mig code/slurm.sh -- code/encoding.py --modelname=spectral
+	sbatch --job-name=enc --time=01:10:00 --gres=gpu:1 --partition=mig code/slurm.sh -- code/encoding.py --modelname=whisper-medium
+	# sbatch --job-name=enc --time=01:10:00 --gres=gpu:1 --partition=mig code/slurm.sh -- code/encoding.py --modelname=whisper-tiny

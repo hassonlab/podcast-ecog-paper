@@ -69,7 +69,7 @@ def preprocess_highqa(x, fs, to_fs, lowcut=200, highcut=5000):
 
 def get_audio():
     sfreq = 512
-    audio_path = "../monkey/stimuli/monkey.wav"
+    audio_path = "../monkey/stimuli/podcast.wav"
     highfs, highqa = wavfile.read(audio_path)
     if highqa.ndim > 1:
         highqa = highqa[:, 0]  # take first channel

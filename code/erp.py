@@ -16,7 +16,7 @@ def main(bids_root: str, band: str, out_dir: str, tmin: float, tmax: float):
     )
     edf_paths = edf_path.match()
 
-    df = pd.read_csv("../monkey/stimuli/monkey_transcript.csv")
+    df = pd.read_csv("../monkey/stimuli/podcast_transcript.csv")
     df.dropna(subset=["start"], inplace=True)
     df.sort_values("start", inplace=True)
 
